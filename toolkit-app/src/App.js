@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import NavBar from "./component/navbar/NavBar";
+import FirstForm from "./pages/firstform/FirstForm";
+import FirstFormikPage from "./pages/firstformikpage/FirstFormikPage";
+import SecForm from "./pages/secform/SecForm";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <Routes>
+        <Route  path="/" element={<FirstForm />}/>
+        <Route path="/secform" element={<SecForm/>}/>
+        <Route path="/firstformikpage" element={<FirstFormikPage/>}/>
+      </Routes>
     </div>
-  );
+  )  
 }
 
 export default App;

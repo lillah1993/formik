@@ -1,0 +1,32 @@
+.FirstFormikPage {
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    label {
+        display: block;
+    }
+
+    form {
+        width: 300px;
+
+        button {
+            margin-top: 10px;
+            display: flex;
+            width: 100%;
+            padding: 15px;
+            justify-content: center;
+            background-color: rgb(105, 118, 197);
+        }
+
+        .form-control {
+
+            .error {
+                color: red;
+            }
+        }
+    }
+
+   
+
+}
